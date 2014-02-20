@@ -1,0 +1,14 @@
+<p>Home screen</p>
+
+<p>{{ message }}</p>
+
+<a href="#basic">Start</a>
+
+<div ng-controller="SampleController">
+  <div id="login">
+    <span ng-show="auth.user">
+      {{auth.user.name}} | <a href="#" ng-click="auth.$logout()">Logout</a>
+    </span>
+    <a href="#" ng-hide="auth.user" ng-click="auth.$login('facebook')">Login</a>
+  </div>
+</div>
